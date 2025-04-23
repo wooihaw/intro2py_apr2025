@@ -50,12 +50,17 @@ c = 'Python'
 print(a, b, c)
 print(a, b, c, sep=',')
 print(a, b, c, sep=':')
+print(a, b, c, sep='***')
 
 # %% Variables (6)
 print('This is line 1.')
 print('This is line 2.')
 print('This is line 3.', end='')
 print('This is still line 3.')
+
+e = '***'
+print('This is line 4.', end=e)
+print('This is still line 4.')
 
 # %% Variables (7)
 a, c, d = 12, -3.4, 5 + 6j
@@ -69,6 +74,7 @@ a = 5
 b = float(a)
 c = str(a)
 d = int(23.4)
+e = int('123')
 
 # %% Operators and Expressions (4)
 n = input("Enter a number: ")

@@ -3,3 +3,9 @@
 # E.g.
 # Enter an integer: 1234
 # Binary: 10011010010, Hexadecimal: 4d2
+
+i = input("Enter an integer: ")
+if i.isdigit():
+    print(f"Binary: {int(i):b}, Hex: {int(i):x}")
+else:
+    print(f"{i} is not an integer!")
