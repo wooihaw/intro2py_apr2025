@@ -3,3 +3,9 @@
 # Furthermore, print True if all the numbers in the list are greater than 50. Otherwise, print False.
 alist = [74, 88, 90, 73, 74, 61, 74, 90, 56, 56, 100, 59, 85, 54, 99]
 print(f'{alist=}')
+
+check1 = any([True if i > 100 else False for i in alist])
+print(check1)
+
+check2 = all([True if i > 50 else False for i in alist])
+print(check2)
