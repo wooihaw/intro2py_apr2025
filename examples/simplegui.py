@@ -1,4 +1,5 @@
 import easygui as gui
+import sys
 
 # File open dialog box
 infile = gui.fileopenbox(msg='Select file to open', title='Open file', default='*.txt')
@@ -29,6 +30,6 @@ if mytext2:
         # File save dialog box
         file = gui.filesavebox(default='mytext.txt', filetypes='*.txt')
         if file == None:
-            exit()
+            sys.exit()
         with open(file, 'w') as savefile:
             savefile.writelines(mytext2)

@@ -117,7 +117,45 @@ print(f"{p2 = }")
 p3 = list(filter(lambda w: w==w[::-1], words))
 print(f"{p3 = }")
 
+#%% OOP example
+class Rectangle:
+    desc = "This is a rectangle"
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+    def __str__(self):
+        return f"A {self.length} x {self.width} rectangle"
+    def __repr__(self):
+        return f"Rectangle({self.length}, {self.width})"
+    def __eq__(self, other):
+        return self.area() == other.area()
+    def area(self):
+        return self.length * self.width
+    def perimeter(self):
+        return 2*self.length + 2*self.width
+    
+r1 = Rectangle(2, 3)
+r2 = Rectangle(3, 2)
+r3 = Rectangle(4, 5)
 
+print(r1)
+print(f"{r1 = }, {r1.area()}, {r1.perimeter()}")
+
+if r1 == r2:
+    print("They are equal size")
+else:
+    print("They are not equal size")
+
+# Child class
+class Square(Rectangle):
+    def __init__(self, length):
+        super().__init__(length, length)
+    def __str__(self):
+        return f"A {self.length} x {self.length} square"
+
+s1 = Square(3)
+print(s1)
+print(f"{s1 = }, {s1.area()}, {s1.perimeter()}")
 
 
 
